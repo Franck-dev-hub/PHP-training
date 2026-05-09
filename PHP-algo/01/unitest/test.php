@@ -5,7 +5,7 @@ function hasChar(string $text, string $char): bool {
     return str_contains($text, $char);
 }
 
-class Test extends TestCase {
+class Test_01 extends TestCase {
     public function testCharExist() {
         $this->assertTrue(hasChar("Hello", 'e'));
     }
