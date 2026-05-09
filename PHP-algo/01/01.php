@@ -1,20 +1,9 @@
 <?php
-$found = (bool)false;
 $char = (string)"e";
-$response = (string)"Character '$char' ";
-
 $text_input = (string)readline("Enter a text : ");
 
-for ($i = 0; $i < strlen($text_input); $i++) {
-    if ($text_input[$i] === $char) {
-        $found = true;
-        $response .= "as been found.";
-        break;
-    }
-}
+$found = str_contains($text_input, $char);
 
-if (!$found) {
-    $response .= "hasn't been found.";
-}
+$status = $found ? "has been found." : "hasn't been found.";
 
-echo $response;
+echo "Character '$char' $status";
